@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         adapter = FalRecyclerAdapter(this,
-            FalDataService.fallar){it -> Toast.makeText(this,"Başarılııı xd", Toast.LENGTH_SHORT).show()
+            FalDataService.fallar){it -> Toast.makeText(this,"Başarılııı xd: ${it.title}", Toast.LENGTH_SHORT).show()
 
         }
 
