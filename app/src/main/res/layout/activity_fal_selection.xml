@@ -26,4 +26,13 @@
             android:layout_marginEnd="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"
             app:layout_constraintDimensionRatio="825:1425" app:pager_animation="Foreground2Background"
     />
+    <Button
+            android:text="Devam et"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:id="@+id/falSelectionBtn" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:onClick="falSelectionBtnClicked"
+            android:background="@android:color/white" style="@style/Widget.AppCompat.Button"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:visibility="invisible"/>
 </android.support.constraint.ConstraintLayout>

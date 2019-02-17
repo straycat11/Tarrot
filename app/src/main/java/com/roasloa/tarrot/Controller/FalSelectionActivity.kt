@@ -22,10 +22,14 @@ class FalSelectionActivity : AppCompatActivity() {
     var simdiKart = 0
     var gelecekKart = 0
 
+    var yeterliKartSecildi = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fal_selection)
+
+
         val falTitle = intent.getStringExtra(EXTRA_FAL_TYPE)
 
 
@@ -33,8 +37,15 @@ class FalSelectionActivity : AppCompatActivity() {
         sliderView.image(resourceId)
         falClosedSlider.indicatorVisibility = PagerIndicator.IndicatorVisibility.Invisible
         falSelectionText.text = "Geçmişin için 3 kart seç."
+        falClosedSlider.setSliderTransformDuration(350,null)
+        falClosedSlider.setDuration(1000)
+
+        falClosedSlider.addSlider(sliderView)
 
         sliderView.setOnSliderClickListener {
+
+            falClosedSlider.setDuration(360)
+
 
             while (gecmisKart != 3) {
             gecmisKart++
@@ -49,23 +60,30 @@ class FalSelectionActivity : AppCompatActivity() {
 
             while (gelecekKart != 4 && simdiKart == 4 && gecmisKart == 3) {
                 gelecekKart++
-                falSelectionText.text = "Geleceğin için ${4-gelecekKart} kart seç."
+                if(gelecekKart < 4) {
+                    falSelectionText.text = "Geleceğin için ${4 - gelecekKart} kart seç."
+                }
+                if(gelecekKart == 4){
+
+                    yeterliKartSecildi = true
+
+                    falSelectionText.text = "Yeteri kadar kart seçtin."
+                    falSelectionBtn.visibility = View.VISIBLE
+                }
                 break
             }
-            while (gelecekKart == 4 && simdiKart == 4 && gecmisKart == 3){
-
-                val falResultIntent = Intent(this, FalResultActivity::class.java)
-                startActivity(falResultIntent)
-
-            }
-
 
         }
-        falClosedSlider.setSliderTransformDuration(350,null)
-        falClosedSlider.setDuration(1000)
 
-        falClosedSlider.addSlider(sliderView)
 
+
+    }
+
+    fun falSelectionBtnClicked(view: View){
+        if (yeterliKartSecildi){
+            val falResultIntent = Intent(this, FalResultActivity::class.java)
+            startActivity(falResultIntent)
+        }
     }
 
     override fun onStop() {
