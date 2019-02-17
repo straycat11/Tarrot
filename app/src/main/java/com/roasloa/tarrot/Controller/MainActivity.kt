@@ -1,5 +1,6 @@
 package com.roasloa.tarrot.Controller
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -7,6 +8,7 @@ import android.widget.Toast
 import com.roasloa.tarrot.Adapters.FalRecyclerAdapter
 import com.roasloa.tarrot.R
 import com.roasloa.tarrot.Services.FalDataService
+import com.roasloa.tarrot.Utilities.EXTRA_FAL_TYPE
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         adapter = FalRecyclerAdapter(this,
-            FalDataService.fallar){it -> Toast.makeText(this,"Başarılııı xd: ${it.title}", Toast.LENGTH_SHORT).show()
+            FalDataService.fallar){fal -> val falSelectionIntent = Intent(this,FalSelectionActivity::class.java)
+            falSelectionIntent.putExtra(EXTRA_FAL_TYPE,fal.title)
+            startActivity(falSelectionIntent)
 
         }
 
