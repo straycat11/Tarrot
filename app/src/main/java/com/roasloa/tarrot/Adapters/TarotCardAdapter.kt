@@ -6,19 +6,50 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.view.ViewPager
 import android.view.View
+import com.roasloa.tarrot.Controller.MainActivity
+import com.roasloa.tarrot.Fragments.CardFragment
+import com.roasloa.tarrot.R
+import com.roasloa.tarrot.Utilities.*
+import kotlinx.android.synthetic.main.card_fragment.*
 
 class TarotCardAdapter(context: Context, fm: FragmentManager): FragmentPagerAdapter(fm), ViewPager.PageTransformer {
 
 
+    lateinit var current: MyLinearLayout
+    lateinit var next: MyLinearLayout
+    lateinit var tarotFragment: CardFragment
+    var scale: Float = 0F
+
+
     override fun getItem(p0: Int): Fragment {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if(p0 == TAROT_CARD_FIRST_PAGE){
+            scale = BIG_SCALE
+        }else scale = SMALL_SCALE
+
+        val newPosition = p0 % TAROT_CARD_COUNT
+        val cardFragment = tarotFragment.newInstance(MainActivity(),newPosition,scale)
+
+        return cardFragment
+
     }
 
     override fun getCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return TAROT_CARD_COUNT * TAROT_CARD_LOOPS
     }
 
     override fun transformPage(p0: View, p1: Float) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
+        val tarotLinearLayout: MyLinearLayout = p0.findViewById(R.id.root)
+
+        scale = BIG_SCALE
+        if(p1 > 0){
+            scale = scale - p1 * DIFF_SCALE
+        }
+        else{
+            scale = scale + p1 * DIFF_SCALE
+        }
+
+        if(scale<0)scale = 0F
+        tarotLinearLayout.setScaleBoth(scale)
     }
 }
