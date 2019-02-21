@@ -68,7 +68,7 @@ class FalSelectionActivity : AppCompatActivity() {
                     yeterliKartSecildi = true
 
                     falSelectionText.text = "Yeteri kadar kart seçtin."
-                    falSelectionBtn.visibility = View.VISIBLE
+                    falSelectionBtn?.visibility = View.VISIBLE
                 }
                 break
             }

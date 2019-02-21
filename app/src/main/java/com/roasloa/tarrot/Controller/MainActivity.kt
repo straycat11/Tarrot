@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         adapter = FalRecyclerAdapter(this,
-            FalDataService.fallar){fal -> val falSelectionIntent = Intent(this,FalSelectionActivity::class.java)
+            FalDataService.fallar){fal -> val falSelectionIntent = Intent(this,TarotDeckActivity::class.java)
             falSelectionIntent.putExtra(EXTRA_FAL_TYPE,fal.title)
             startActivity(falSelectionIntent)
 

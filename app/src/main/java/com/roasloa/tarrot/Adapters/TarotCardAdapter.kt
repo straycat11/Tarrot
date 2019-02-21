@@ -10,15 +10,15 @@ import com.roasloa.tarrot.Controller.MainActivity
 import com.roasloa.tarrot.Fragments.CardFragment
 import com.roasloa.tarrot.R
 import com.roasloa.tarrot.Utilities.*
-import kotlinx.android.synthetic.main.card_fragment.*
 
 class TarotCardAdapter(context: Context, fm: FragmentManager): FragmentPagerAdapter(fm), ViewPager.PageTransformer {
 
 
     lateinit var current: MyLinearLayout
     lateinit var next: MyLinearLayout
-    lateinit var tarotFragment: CardFragment
     var scale: Float = 0F
+
+
 
 
     override fun getItem(p0: Int): Fragment {
@@ -26,10 +26,11 @@ class TarotCardAdapter(context: Context, fm: FragmentManager): FragmentPagerAdap
             scale = BIG_SCALE
         }else scale = SMALL_SCALE
 
-        val newPosition = p0 % TAROT_CARD_COUNT
-        val cardFragment = tarotFragment.newInstance(MainActivity(),newPosition,scale)
 
-        return cardFragment
+
+        val newPosition = p0 % TAROT_CARD_COUNT
+
+        return CardFragment.newInstance(MainActivity(),newPosition, scale)
 
     }
 
@@ -43,10 +44,10 @@ class TarotCardAdapter(context: Context, fm: FragmentManager): FragmentPagerAdap
 
         scale = BIG_SCALE
         if(p1 > 0){
-            scale = scale - p1 * DIFF_SCALE
+            scale -= p1 * DIFF_SCALE
         }
         else{
-            scale = scale + p1 * DIFF_SCALE
+            scale += p1 * DIFF_SCALE
         }
 
         if(scale<0)scale = 0F
