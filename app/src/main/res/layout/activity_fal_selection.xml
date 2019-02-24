@@ -5,34 +5,12 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Controller.FalSelectionActivity" android:background=" #410C37">
-
-    <TextView
-            android:text="Select 3 Cards"
+        tools:context=".Controller.FalSelectionActivity">
+    <android.support.v7.widget.RecyclerView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/falSelectionText" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/falClosedSlider" android:fontFamily="@font/aldrich"
-            android:textSize="30sp" android:textAlignment="center" android:textColor="@android:color/white"/>
-
-    <com.daimajia.slider.library.SliderLayout
-            android:id="@+id/falClosedSlider"
-            android:layout_width="0dp"
-            android:layout_height="400dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintDimensionRatio="825:1425" app:pager_animation="Foreground2Background"
-    />
-    <Button
-            android:text="Devam et"
-            android:layout_width="0dp"
-            android:layout_height="46dp"
-            android:id="@+id/falSelectionBtn" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:onClick="falSelectionBtnClicked"
-            android:background="@android:color/white" style="@style/Widget.AppCompat.Button"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:visibility="invisible"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tarotBackListView" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 </android.support.constraint.ConstraintLayout>
