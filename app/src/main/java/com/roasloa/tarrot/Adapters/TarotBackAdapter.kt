@@ -10,7 +10,7 @@ import android.widget.TextView
 import com.roasloa.tarrot.Model.SecilecekKart
 import com.roasloa.tarrot.R
 
-class TarotBackAdapter(val context: Context, val kartlar: List<SecilecekKart>, val itemClick: (SecilecekKart)->Unit)
+class TarotBackAdapter(val context: Context, val kartlar: List<SecilecekKart>, val itemClick: (Int, SecilecekKart)->Unit)
     : RecyclerView.Adapter<TarotBackAdapter.KartHolder>(){
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): KartHolder {
@@ -22,17 +22,22 @@ class TarotBackAdapter(val context: Context, val kartlar: List<SecilecekKart>, v
         return kartlar.count()
     }
 
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
+
     override fun onBindViewHolder(p0: KartHolder, p1: Int) {
         p0?.bindKart(kartlar[p1], context)
     }
 
-    inner class KartHolder(itemView: View?, val itemClick: (SecilecekKart) -> Unit) : RecyclerView.ViewHolder(itemView!!){
+    inner class KartHolder(itemView: View?, val itemClick: (Int, SecilecekKart) -> Unit) : RecyclerView.ViewHolder(itemView!!){
         val kartImage = itemView?.findViewById<ImageView>(R.id.tarotBackImage)
 
         fun bindKart(secilecekKart: SecilecekKart, context: Context) {
-            val resourceId = context.resources.getIdentifier("tarotback", "drawable",context.packageName)
+            val resourceId = context.resources.getIdentifier(secilecekKart.drawable, "drawable",context.packageName)
             kartImage?.setImageResource(resourceId)
-            itemView.setOnClickListener{itemClick(secilecekKart)}
+            var position = secilecekKart.kartId
+            itemView.setOnClickListener{itemClick(position, secilecekKart)}
         }
     }
 

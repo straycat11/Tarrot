@@ -20,17 +20,19 @@ class FalSelectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fal_selection)
 
         adapter = TarotBackAdapter(this,FalDataService.secilecekKartlar){
-                kart ->
-            kart.setVisibility(tarotBackImage, false)
-//            if(kart.visibility){
-//                tarotBackImage.visibility = View.VISIBLE
-//            }else {
-//                tarotBackImage.visibility = View.INVISIBLE
-//            }
+                pos,_ ->
+            // here the lambda expression carries the position of the item clicked
+            // and we can access that element using the following method
+            tarotBackListView.getChildAt(pos)?.visibility = View.INVISIBLE
 
         }
 
         val layoutManager = GridLayoutManager(this, 6)
+
+
+
+
+
 
         tarotBackListView.layoutManager = layoutManager
         tarotBackListView.adapter = adapter
