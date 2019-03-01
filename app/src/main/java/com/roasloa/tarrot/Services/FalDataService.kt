@@ -1,53 +1,54 @@
 package com.roasloa.tarrot.Services
 
 import com.roasloa.tarrot.Model.Fal
+import com.roasloa.tarrot.Model.SecilecekKart
 
 object FalDataService {
 
-    val fallar = listOf<Fal>(Fal("3lü", "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
-            " Maecenas tortor metus, laoreet eu dapibus nec, ornare semper enim. " +
-            "Morbi interdum orci ante, at facilisis mauris sollicitudin non." +
-            " Nulla ac turpis placerat, elementum quam eu, auctor quam." +
-            " Nunc dignissim felis ac odio vehicula finibus." +
-            " In accumsan elit ligula, eu aliquam quam tempor et." +
-            " Donec ornare vehicula sapien, eget aliquet nibh suscipit at." +
-            " Sed vel varius risus, sed bibendum felis." +
-            " Phasellus sit amet tempor eros, vel condimentum urna." +
-            " In sed orci venenatis, mattis dolor ac, lacinia erat." +
-            " Sed iaculis posuere metus sit amet ultrices." +
-            " Proin interdum eget neque id porttitor." +
-            " Donec et nisi non odio finibus suscipit ac et odio." +
-            " Morbi tempus, elit tincidunt dictum viverra, arcu est interdum erat," +
-            " ut euismod quam dolor sed nisl. "), Fal("Arkadaşın için baktır","Morbi egestas ipsum ut sapien tempus laoreet. In feugiat vehicula ante, et cursus risus molestie id. Praesent commodo metus at nulla ullamcorper, in iaculis risus fringilla. Donec turpis quam, sollicitudin ac neque eu, sagittis hendrerit lorem. Quisque pharetra mauris aliquam magna porta, nec pellentesque nunc tincidunt. In dictum porttitor leo sed ultricies. Aliquam ultrices magna in massa egestas, ac molestie ex vestibulum. In sagittis lacus ac ligula ornare dapibus. Quisque vel pulvinar purus, vel dapibus mi. Fusce leo odio, viverra eu sodales sed, condimentum id massa. Phasellus id tincidunt ex. "),
-        Fal("Sevgilin için baktır", "Mauris venenatis arcu tellus, ac hendrerit nulla ornare ut. Praesent tristique aliquet ex. Quisque vehicula mattis fermentum. Mauris rutrum ullamcorper purus ac convallis. Cras urna velit, convallis a porttitor non, facilisis ultrices nisi. Etiam venenatis, sapien non pellentesque convallis, justo magna faucibus nulla, fringilla eleifend odio elit eu purus. Donec finibus quam id dui dapibus sodales. Aenean ac laoreet lacus. Nunc ac ultrices elit. Sed vel fermentum turpis. Morbi convallis mollis sem. Cras placerat ut purus a maximus. Vivamus a porttitor justo. Etiam tempus diam dictum, maximus dui ut, faucibus magna. Nulla metus nibh, malesuada sed scelerisque at, vestibulum ac purus. "),Fal("3lü", "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
-                " Maecenas tortor metus, laoreet eu dapibus nec, ornare semper enim. " +
-                "Morbi interdum orci ante, at facilisis mauris sollicitudin non." +
-                " Nulla ac turpis placerat, elementum quam eu, auctor quam." +
-                " Nunc dignissim felis ac odio vehicula finibus." +
-                " In accumsan elit ligula, eu aliquam quam tempor et." +
-                " Donec ornare vehicula sapien, eget aliquet nibh suscipit at." +
-                " Sed vel varius risus, sed bibendum felis." +
-                " Phasellus sit amet tempor eros, vel condimentum urna." +
-                " In sed orci venenatis, mattis dolor ac, lacinia erat." +
-                " Sed iaculis posuere metus sit amet ultrices." +
-                " Proin interdum eget neque id porttitor." +
-                " Donec et nisi non odio finibus suscipit ac et odio." +
-                " Morbi tempus, elit tincidunt dictum viverra, arcu est interdum erat," +
-                " ut euismod quam dolor sed nisl. "),Fal("3lü", "Lorem ipsum dolor sit amet, consectetur adipiscing elit." +
-                " Maecenas tortor metus, laoreet eu dapibus nec, ornare semper enim. " +
-                "Morbi interdum orci ante, at facilisis mauris sollicitudin non." +
-                " Nulla ac turpis placerat, elementum quam eu, auctor quam." +
-                " Nunc dignissim felis ac odio vehicula finibus." +
-                " In accumsan elit ligula, eu aliquam quam tempor et." +
-                " Donec ornare vehicula sapien, eget aliquet nibh suscipit at." +
-                " Sed vel varius risus, sed bibendum felis." +
-                " Phasellus sit amet tempor eros, vel condimentum urna." +
-                " In sed orci venenatis, mattis dolor ac, lacinia erat." +
-                " Sed iaculis posuere metus sit amet ultrices." +
-                " Proin interdum eget neque id porttitor." +
-                " Donec et nisi non odio finibus suscipit ac et odio." +
-                " Morbi tempus, elit tincidunt dictum viverra, arcu est interdum erat," +
-                " ut euismod quam dolor sed nisl. ")
-    )
+    val secilecekKartlar = listOf<SecilecekKart>(SecilecekKart("tarotback",true,0),
+        SecilecekKart("tarotback",true,1),SecilecekKart("tarotback",true,2),
+        SecilecekKart("tarotback",true,3),SecilecekKart("tarotback",true,4),
+        SecilecekKart("tarotback",true,5),SecilecekKart("tarotback",true,6),
+        SecilecekKart("tarotback",true,7),SecilecekKart("tarotback",true,8),
+    SecilecekKart("tarotback",true,9),SecilecekKart("tarotback",true,10),
+    SecilecekKart("tarotback",true,11),SecilecekKart("tarotback",true,12),
+    SecilecekKart("tarotback",true,13),SecilecekKart("tarotback",true,14),
+    SecilecekKart("tarotback",true,15),SecilecekKart("tarotback",true,16),
+        SecilecekKart("tarotback",true,17),SecilecekKart("tarotback",true,18),
+        SecilecekKart("tarotback",true,19),SecilecekKart("tarotback",true,20),
+        SecilecekKart("tarotback",true,21),SecilecekKart("tarotback",true,22),
+        SecilecekKart("tarotback",true,23),SecilecekKart("tarotback",true,24),
+        SecilecekKart("tarotback",true,25),SecilecekKart("tarotback",true,26),
+        SecilecekKart("tarotback",true,27),SecilecekKart("tarotback",true,28),
+        SecilecekKart("tarotback",true,29),SecilecekKart("tarotback",true,30),
+        SecilecekKart("tarotback",true,31),SecilecekKart("tarotback",true,32),
+        SecilecekKart("tarotback",true,33),SecilecekKart("tarotback",true,34),
+        SecilecekKart("tarotback",true,35),SecilecekKart("tarotback",true,36),
+        SecilecekKart("tarotback",true,37),SecilecekKart("tarotback",true,38),
+        SecilecekKart("tarotback",true,39),SecilecekKart("tarotback",true,40),
+        SecilecekKart("tarotback",true,41),SecilecekKart("tarotback",true,42),
+        SecilecekKart("tarotback",true,43),SecilecekKart("tarotback",true,44),
+        SecilecekKart("tarotback",true,45),SecilecekKart("tarotback",true,46),
+        SecilecekKart("tarotback",true,47),SecilecekKart("tarotback",true,48),
+        SecilecekKart("tarotback",true,49),SecilecekKart("tarotback",true,50),
+        SecilecekKart("tarotback",true,51),SecilecekKart("tarotback",true,52),
+        SecilecekKart("tarotback",true,53),SecilecekKart("tarotback",true,54),
+        SecilecekKart("tarotback",true,55),SecilecekKart("tarotback",true,56),
+        SecilecekKart("tarotback",true,57),SecilecekKart("tarotback",true,58),
+        SecilecekKart("tarotback",true,59),SecilecekKart("tarotback",true,60),
+        SecilecekKart("tarotback",true,61),SecilecekKart("tarotback",true,62),
+        SecilecekKart("tarotback",true,63),SecilecekKart("tarotback",true,64),
+        SecilecekKart("tarotback",true,65),SecilecekKart("tarotback",true,66),
+        SecilecekKart("tarotback",true,67),SecilecekKart("tarotback",true,68),
+        SecilecekKart("tarotback",true,69),SecilecekKart("tarotback",true,170),
+        SecilecekKart("tarotback",true,71))
+
+
+    val fallar = listOf<Fal>(Fal("Kendin için baktır", "X kart seç, falına bakalım."),
+        Fal("Arkadaşın için baktır","Arkadaşın için fal baktır!"),
+        Fal("Sevgilin için baktır", "Sevgilin için fal baktır!"))
+
+
+
 
 }

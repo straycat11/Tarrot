@@ -9,9 +9,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".Controller.FalResultActivity">
-        </activity>
         <activity android:name=".Controller.FalSelectionActivity">
+        </activity>
+        <activity android:name=".Controller.FalResultActivity">
         </activity>
         <activity android:name=".Controller.MainActivity">
             <intent-filter>
