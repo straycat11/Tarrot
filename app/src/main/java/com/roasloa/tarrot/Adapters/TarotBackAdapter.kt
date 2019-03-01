@@ -15,16 +15,16 @@ class TarotBackAdapter(val context: Context, val kartlar: List<SecilecekKart>, v
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): KartHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.tarot_back, p0, false)
-        return KartHolder(view, itemClick)
+
+        val holder = KartHolder(view,itemClick)
+
+        return holder
     }
 
     override fun getItemCount(): Int {
         return kartlar.count()
     }
 
-    override fun getItemViewType(position: Int): Int {
-        return position
-    }
 
     override fun onBindViewHolder(p0: KartHolder, p1: Int) {
         p0?.bindKart(kartlar[p1], context)
