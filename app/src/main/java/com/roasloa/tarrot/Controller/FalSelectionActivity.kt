@@ -20,10 +20,12 @@ class FalSelectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fal_selection)
 
         adapter = TarotBackAdapter(this,FalDataService.secilecekKartlar){
-                pos,_ ->
+                pos,kart ->
             // here the lambda expression carries the position of the item clicked
             // and we can access that element using the following method
-            tarotBackListView.getChildAt(pos)?.visibility = View.INVISIBLE
+            kart.drawable = ""
+            adapter.notifyDataSetChanged()
+//            tarotBackListView.getChildAt(pos)?.visibility = View.INVISIBLE
 
         }
 

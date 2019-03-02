@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import com.roasloa.tarrot.Model.SecilecekKart
 import com.roasloa.tarrot.R
 
@@ -16,9 +15,7 @@ class TarotBackAdapter(val context: Context, val kartlar: List<SecilecekKart>, v
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): KartHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.tarot_back, p0, false)
 
-        val holder = KartHolder(view,itemClick)
-
-        return holder
+        return KartHolder(view, itemClick)
     }
 
     override fun getItemCount(): Int {

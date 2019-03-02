@@ -3,7 +3,7 @@ package com.roasloa.tarrot.Model
 import android.view.View
 import android.widget.ImageView
 
-class SecilecekKart(val drawable: String, var visibility: Boolean, var id: Int) {
+class SecilecekKart(var drawable: String, var visibility: Boolean, var id: Int) {
 
     val kartId = this.id
 
