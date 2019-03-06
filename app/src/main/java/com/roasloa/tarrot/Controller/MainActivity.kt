@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         adapter = FalRecyclerAdapter(this,
             FalDataService.fallar){fal -> val falSelectionIntent = Intent(this,FalSelectionActivity::class.java)
             falSelectionIntent.putExtra(EXTRA_FAL_TYPE,fal.title)

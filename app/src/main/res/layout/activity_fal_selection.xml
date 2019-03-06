@@ -14,4 +14,13 @@
             android:id="@+id/tarotBackListView" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
     />
+    <TextView
+            android:layout_width="173dp"
+            android:layout_height="19dp"
+            android:id="@+id/falSelectionText"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="24dp" tools:text="Geçmişin için 3 kart seç."
+            android:textColor="@android:color/white" android:background="@color/colorPrimaryDark"
+            android:textAlignment="center"/>
 </android.support.constraint.ConstraintLayout>
